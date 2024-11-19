@@ -2,7 +2,7 @@
 require_once '../Model/Entity/Pessoa.php';
 require_once '../Model/DAO/PessoaDAO.php';
 
-public class PessoaController{
+public abstract class PessoaController{
    //Aqui seria o ajuste da ligação entre o controller e a view 
    //Configuração de rotas
    public function cadastro()
