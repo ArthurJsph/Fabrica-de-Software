@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/form.css">
 </head>
 <body>
+  
+ <!--Aqui seria o cadastro da pessoa--> 
 <div class="container">
     <section class="header">
       <h2>Nova conta</h2>
@@ -14,7 +16,7 @@
 
     <form id="form" class="form">
       <div class="form-content">
-        <label for="username">Nome do usuário</label>
+        <label for="username">Nome da pessoa</label>
         <input
           type="text"
           id="username"
@@ -58,7 +60,6 @@
     </form>
 
   </div>
-  
-                      
+                  
 </body>
 </html>
