@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Models\DAO;
+
+use App\Lib\Conexao;
+use PDO;
+
+abstract class BaseDAO
+{
+    private $conexao;
+
+    public function __construct()
+    {
+        $this->conexao = Conexao::getInstance();
+    }
+
+    protected function getConexao()
+    {
+        return $this->conexao;
+    }
+
+    public function select($sql, $params = [])
+    {
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->execute($params);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function insert($sql, $params = [])
+    {
+        $stmt = $this->conexao->prepare($sql);
+        return $stmt->execute($params);
+    }
+
+    public function update($sql, $params = [])
+    {
+        $stmt = $this->conexao->prepare($sql);
+        return $stmt->execute($params);
+    }
+
+    public function delete($sql, $params = [])
+    {
+        $stmt = $this->conexao->prepare($sql);
+        return $stmt->execute($params);
+    }
+}
